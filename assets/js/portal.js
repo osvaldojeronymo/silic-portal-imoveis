@@ -1,7 +1,8 @@
 // URLs dos sistemas integrados
 const URLS = {
     gestao: 'https://osvaldojeronymo.github.io/show-input-doc/?from=portal',
-    solicitacoes: 'https://osvaldojeronymo.github.io/show-request-service/?from=portal'
+    solicitacoes: 'https://osvaldojeronymo.github.io/show-request-service/?from=portal',
+    handson: 'https://osvaldojeronymo.github.io/silic-hands-on/?from=portal'
 };
 
 /**
