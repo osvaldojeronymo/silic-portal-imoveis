@@ -51,9 +51,9 @@ body {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2.5rem;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto 4rem auto;
 }
 
@@ -81,6 +81,10 @@ body {
     border-left: 5px solid #1976d2;
 }
 
+.card.hands-on {
+    border-left: 5px solid #6f42c1;
+}
+
 .card-icon {
     margin-bottom: 2rem;
 }
@@ -95,6 +99,10 @@ body {
     color: #1976d2;
 }
 
+.card.hands-on .card-icon svg {
+    color: #6f42c1;
+}
+
 .card h3 {
     font-size: 1.8rem;
     color: #0066cc;
@@ -104,6 +112,10 @@ body {
 
 .card.solicitacoes h3 {
     color: #1976d2;
+}
+
+.card.hands-on h3 {
+    color: #6f42c1;
 }
 
 .card ul {
@@ -133,6 +145,10 @@ body {
     color: #1976d2;
 }
 
+.card.hands-on li::before {
+    color: #6f42c1;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -154,6 +170,10 @@ body {
 
 .btn-secondary {
     background: linear-gradient(135deg, #1976d2, #1565c0);
+}
+
+.btn-hands-on {
+    background: linear-gradient(135deg, #6f42c1, #5a32a3);
 }
 
 .btn:hover {
@@ -256,7 +276,10 @@ body {
 @media (max-width: 768px) {
     .header h1 { font-size: 2.5rem; }
     .hero h2 { font-size: 2.2rem; }
-    .cards { grid-template-columns: 1fr; gap: 2rem; }
+    .cards { 
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+    }
     .card { padding: 2rem; }
     .quick-grid { grid-template-columns: repeat(2, 1fr); }
 }
