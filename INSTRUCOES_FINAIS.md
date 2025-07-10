@@ -50,24 +50,24 @@ git push -u origin main
 ```
 
 ### 3. Configurar GitHub Pages
-1. Acesse: https://github.com/osvaldojeronymo/silic-portal
+1. Acesse: https://github.com/osvaldojeronymo/silic-portal-imoveis
 2. Settings → Pages
 3. Source: Deploy from a branch
 4. Branch: main, Folder: / (root)
 5. Save
 
 ### 4. Aguardar Ativação (~5-10 min)
-- URL final: https://osvaldojeronymo.github.io/silic-portal/
+- URL final: https://osvaldojeronymo.github.io/silic-portal-imoveis/
 
 ## 🔗 Links Importantes
 
 ### URLs dos Sistemas
-- **Portal:** https://osvaldojeronymo.github.io/silic-portal/
+- **Portal:** https://osvaldojeronymo.github.io/silic-portal-imoveis/
 - **Gestão:** https://osvaldojeronymo.github.io/show-input-doc/
 - **Solicitações:** https://osvaldojeronymo.github.io/show-request-service/
 
 ### Repositórios
-- **Portal:** https://github.com/osvaldojeronymo/silic-portal
+- **Portal:** https://github.com/osvaldojeronymo/silic-portal-imoveis
 - **Gestão:** https://github.com/osvaldojeronymo/show-input-doc
 - **Solicitações:** https://github.com/osvaldojeronymo/show-request-service
 

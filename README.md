@@ -2,11 +2,11 @@
 
 🏢 **Portal de entrada para os sistemas imobiliários da CAIXA Econômica Federal**
 
-[![Deploy Status](https://img.shields.io/badge/deploy-success-brightgreen.svg)](https://osvaldojeronymo.github.io/silic-portal/)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/osvaldojeronymo/silic-portal/releases)
+[![Deploy Status](https://img.shields.io/badge/deploy-success-brightgreen.svg)](https://osvaldojeronymo.github.io/silic-portal-imoveis/)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/osvaldojeronymo/silic-portal-imoveis/releases)
 
 ## 🌐 **Acesso Rápido**
-- **🚀 Portal Principal:** [https://osvaldojeronymo.github.io/silic-portal/](https://osvaldojeronymo.github.io/silic-portal/)
+- **🚀 Portal Principal:** [https://osvaldojeronymo.github.io/silic-portal-imoveis/](https://osvaldojeronymo.github.io/silic-portal-imoveis/)
 
 ## 🏗️ **Sistemas Integrados**
 
@@ -50,10 +50,10 @@ Este projeto usa GitHub Pages para deploy automático:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/osvaldojeronymo/silic-portal.git
+git clone https://github.com/osvaldojeronymo/silic-portal-imoveis.git
 
 # Acesse a pasta
-cd silic-portal
+cd silic-portal-imoveis
 
 # Abra no navegador
 open index.html
@@ -88,7 +88,7 @@ silic-portal/
 
 Este é um projeto interno da CAIXA. Para sugestões ou melhorias:
 
-1. Abra uma [Issue](https://github.com/osvaldojeronymo/silic-portal/issues)
+1. Abra uma [Issue](https://github.com/osvaldojeronymo/silic-portal-imoveis/issues)
 2. Descreva a melhoria ou problema
 3. Aguarde análise da equipe
 
@@ -96,7 +96,7 @@ Este é um projeto interno da CAIXA. Para sugestões ou melhorias:
 
 - **Sistema:** SILIC 2.0
 - **Contato:** silic@caixa.gov.br
-- **Documentação:** [Wiki do Projeto](https://github.com/osvaldojeronymo/silic-portal/wiki)
+- **Documentação:** [Wiki do Projeto](https://github.com/osvaldojeronymo/silic-portal-imoveis/wiki)
 
 ## 📄 **Licença**
 
