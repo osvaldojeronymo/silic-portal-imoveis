@@ -1,0 +1,109 @@
+@use './variables';
+@use 'sass:color';
+
+// Gradiente institucional para header
+.header {
+  background-color: #003366;
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  .navbar {
+    padding: 0 24px;
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 80px;
+      gap: 20px;
+    }
+    .nav-logo {
+      .logo {
+        height: 40px;
+        width: auto;
+      }
+    }
+    .nav-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      flex: 1;
+      h1 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1.2;
+      }
+      p {
+        color: #fff;
+        font-size: 14px;
+        margin: 0;
+        opacity: 0.9;
+        line-height: 1.2;
+      }
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      z-index: 1001;
+      position: relative;
+      .btn-voltar-portal {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        background: rgba(255,255,255,0.15);
+        border: 2px solid rgba(255,255,255,0.3);
+        border-radius: 8px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        box-shadow: none;
+        &:hover {
+          background: rgba(255,255,255,0.25);
+          border-color: rgba(255,255,255,0.5);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        i {
+          transition: transform 0.3s ease;
+        }
+        &:hover i {
+          transform: translateX(-3px);
+        }
+      }
+    }
+  }
+
+  // Responsividade header
+  @media (max-width: 600px) {
+    .navbar {
+      padding: 0 8px;
+      .nav-container {
+        gap: 8px;
+        height: 56px;
+      }
+      .nav-logo .logo {
+        height: 28px;
+      }
+      .nav-text h1 {
+        font-size: 15px;
+      }
+      .nav-text p {
+        font-size: 11px;
+      }
+      .nav-actions .btn-voltar-portal {
+        font-size: 11px;
+        padding: 6px 12px;
+      }
+    }
+  }
+}

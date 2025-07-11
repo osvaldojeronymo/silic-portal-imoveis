@@ -1,3 +1,5 @@
+    border-left: 5px solid #0066cc;
+    /* Mantém o padrão dos outros cards */
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
@@ -62,7 +64,11 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    justify-content: flex-start;
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
@@ -82,11 +88,15 @@ body {
 }
 
 .card.hands-on {
-    border-left: 5px solid #6f42c1;
+    border-left: 5px solid #0066cc;
+}
+
+.card.dashboard {
+    border-left: 5px solid #0066cc;
 }
 
 .card-icon {
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
 }
 
 .card-icon svg {
@@ -99,14 +109,14 @@ body {
     color: #1976d2;
 }
 
-.card.hands-on .card-icon svg {
-    color: #6f42c1;
+.card.dashboard .card-icon svg {
+    color: #0066cc;
 }
 
 .card h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #0066cc;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1rem 0;
     font-weight: 700;
 }
 
@@ -114,46 +124,54 @@ body {
     color: #1976d2;
 }
 
-.card.hands-on h3 {
-    color: #6f42c1;
+.card.dashboard h3 {
+    color: #0066cc;
 }
 
 .card ul {
     list-style: none;
     padding: 0;
-    margin: 0 0 2.5rem 0;
+    margin: 0 0 1.5rem 0;
     text-align: left;
+    width: 100%;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card li {
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
     position: relative;
-    padding-left: 2rem;
+    padding-left: 1.5rem;
     font-size: 1rem;
     font-weight: 500;
 }
 
 .card li::before {
-    content: "●";
+    content: "";
     position: absolute;
     left: 0;
-    color: #0066cc;
-    font-size: 1.2rem;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: #0066cc;
+    border-radius: 50%;
 }
 
 .card.solicitacoes li::before {
-    color: #1976d2;
+    background: #1976d2;
 }
 
 .card.hands-on li::before {
-    color: #6f42c1;
+    background: #0066cc;
 }
 
 .btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.8rem;
-    padding: 1.2rem 2.5rem;
+    padding: 1.2rem 0;
     border: none;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -162,6 +180,13 @@ body {
     transition: all 0.3s ease;
     color: white;
     text-decoration: none;
+    width: 100%;
+    max-width: 220px;
+    margin-top: auto;
+    margin-top: auto;
+    width: 100%;
+    max-width: 220px;
+    align-self: center;
 }
 
 .btn-primary {

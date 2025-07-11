@@ -1,0 +1,31 @@
+@use 'sass:color';
+@use './variables';
+
+// Estilos das ações rápidas
+.quick-actions {
+  background: variables.$primary-dark;
+  padding: 1.5rem 0;
+  .quick-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    .quick-btn {
+      background: variables.$primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 100px;
+      padding: 0.7rem 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      transition: background 0.2s;
+      &:hover {
+        background: color.adjust(variables.$primary-color, $lightness: -10%);
+      }
+    }
+  }
+}
