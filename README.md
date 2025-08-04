@@ -1,109 +1,51 @@
-# SILIC 2.0 - Portal de Serviços
+# SILIC Portal 2.0 – Protótipo Institucional CAIXA
 
-🏢 **Portal de entrada para os sistemas imobiliários da CAIXA Econômica Federal**
+![Logo CAIXA](assets/images/logo-caixa.svg)
 
-[![Deploy Status](https://img.shields.io/badge/deploy-success-brightgreen.svg)](https://osvaldojeronymo.github.io/silic-portal-imoveis/)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/osvaldojeronymo/silic-portal-imoveis/releases)
+## Sobre o Projeto
+Protótipo do novo portal SILIC 2.0, seguindo padrões visuais e institucionais da CAIXA, com foco em responsividade, acessibilidade, componentização e compatibilidade futura com Angular/NodeJS.
 
-## 🌐 **Acesso Rápido**
-- **🚀 Portal Principal:** [https://osvaldojeronymo.github.io/silic-portal-imoveis/](https://osvaldojeronymo.github.io/silic-portal-imoveis/)
+- Layout institucional CAIXA
+- Header, cards, ações rápidas e footer padronizados
+- Responsivo e acessível
+- Código fonte limpo e organizado (HTML, SCSS/CSS)
+- Pronto para evolução e integração futura
 
-## 🏗️ **Sistemas Integrados**
+## Demonstração Online
+Acesse a versão mais recente do protótipo via GitHub Pages:
 
-| Sistema | Descrição | URL | Repositório |
-|---------|-----------|-----|-------------|
-| 🏢 **Gestão de Imóveis** | Cadastro, edição e gestão de imóveis | [Acessar](https://osvaldojeronymo.github.io/show-input-doc/) | [Repo](https://github.com/osvaldojeronymo/show-input-doc) |
-| 📋 **Solicitações de Serviços** | Locação, cessão e comodato | [Acessar](https://osvaldojeronymo.github.io/show-request-service/) | [Repo](https://github.com/osvaldojeronymo/show-request-service) |
+➡️ [Visualizar Protótipo](https://osvaldojeronymo.github.io/silic-portal-imoveis/)
 
-## ✨ **Funcionalidades**
+> O link é atualizado automaticamente a cada push neste repositório.
 
-- ✅ **Seleção de Sistemas:** Interface intuitiva para escolher entre gestão e solicitações
-- ✅ **Ações Rápidas:** Cadastro, busca e relatórios com um clique
-- ✅ **Dashboard Pessoal:** Status de suas solicitações e da unidade
-- ✅ **Design Responsivo:** Funciona em desktop, tablet e mobile
-- ✅ **Design System CAIXA:** Cores e tipografia oficiais
+## Como rodar localmente
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/osvaldojeronymo/silic-portal-imoveis.git
+   ```
+2. Abra o arquivo `index.html` no navegador.
+3. (Opcional) Para editar estilos, altere os arquivos SCSS em `assets/scss/` e compile para `assets/css/style.css`.
 
-## 🎯 **Para Funcionários da CAIXA**
+## Estrutura Essencial
+- `index.html` – Página principal
+- `assets/css/style.css` – CSS final compilado
+- `assets/scss/` – SCSS modularizado (header, cards, footer, etc)
+- `assets/images/` – Imagens institucionais
+- `assets/js/` – Scripts JS (se houver)
+- `README.md` – Documentação do projeto
 
-### **O que você pode fazer:**
-1. **📊 Gerenciar Imóveis:** Cadastrar, editar e consultar dados
-2. **📝 Fazer Solicitações:** Locação, cessão ou comodato
-3. **⚡ Ações Rápidas:** Acesso direto às funções mais usadas
-4. **📈 Acompanhar Status:** Suas solicitações e da unidade
+## Fluxo de Trabalho Recomendado
+- Commits frequentes e descritivos
+- Push para o GitHub para manter o histórico e a demonstração online atualizados
+- Utilize branches para novas features ou correções
 
-## 🛠️ **Tecnologias**
+## Prints do Protótipo
+> (Adicione aqui prints ou GIFs do layout, se desejar)
 
-- **Frontend:** HTML5, CSS3, JavaScript ES6+
-- **Design:** Design System CAIXA
-- **Deploy:** GitHub Pages
-- **Responsividade:** CSS Grid + Flexbox
-
-## 📱 **Compatibilidade**
-
-- ✅ Chrome, Firefox, Safari, Edge
-- ✅ Desktop, Tablet, Mobile
-- ✅ Acessibilidade (WCAG 2.1)
-
-## 🚀 **Deploy**
-
-Este projeto usa GitHub Pages para deploy automático:
-
-```bash
-# Clone o repositório
-git clone https://github.com/osvaldojeronymo/silic-portal-imoveis.git
-
-# Acesse a pasta
-cd silic-portal-imoveis
-
-# Abra no navegador
-open index.html
-```
-
-## 📋 **Estrutura do Projeto**
-
-```
-silic-portal/
-├── index.html              # Portal principal
-├── assets/
-│   ├── css/
-│   │   └── portal.css      # Estilos principais
-│   ├── js/
-│   │   └── portal.js       # Funcionalidades
-│   └── images/
-│       └── logo-caixa.svg  # Logo oficial
-├── docs/                   # Documentação
-└── README.md              # Este arquivo
-```
-
-## 📝 **Changelog**
-
-### v1.0.0 (2025-01-10)
-- ✅ Portal inicial com seleção de sistemas
-- ✅ Ações rápidas implementadas
-- ✅ Dashboard de status personalizado
-- ✅ Design responsivo completo
-- ✅ Integração com sistemas existentes
-
-## 🤝 **Contribuição**
-
-Este é um projeto interno da CAIXA. Para sugestões ou melhorias:
-
-1. Abra uma [Issue](https://github.com/osvaldojeronymo/silic-portal-imoveis/issues)
-2. Descreva a melhoria ou problema
-3. Aguarde análise da equipe
-
-## 📞 **Suporte**
-
-- **Sistema:** SILIC 2.0
-- **Contato:** silic@caixa.gov.br
-- **Documentação:** [Wiki do Projeto](https://github.com/osvaldojeronymo/silic-portal-imoveis/wiki)
-
-## 📄 **Licença**
-
-Projeto desenvolvido seguindo diretrizes da CAIXA Econômica Federal.
+## Licença
+Este projeto é um protótipo institucional e segue as diretrizes da CAIXA. Uso restrito para fins de demonstração e evolução interna.
 
 ---
 
-**Desenvolvido com ❤️ pela equipe SILIC 2.0**
-
-*Última atualização: 10 de janeiro de 2025*
+Desenvolvido por Osvaldo Jeronymo
+[LinkedIn](https://www.linkedin.com/in/osvaldojeronymo/) | [GitHub](https://github.com/osvaldojeronymo)

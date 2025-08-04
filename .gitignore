@@ -1,0 +1,29 @@
+# Node, macOS, Linux, VSCode, SCSS, e arquivos temporários
+node_modules/
+dist/
+build/
+.DS_Store
+*.log
+*.tmp
+*.swp
+*.swo
+*.swn
+*.bak
+*.sass-cache/
+.cache/
+.env
+.vscode/
+.idea/
+Thumbs.db
+
+# Ignorar CSS compilado se usar SCSS como fonte principal (opcional)
+# assets/css/*.css
+
+# Não ignorar arquivos essenciais do projeto
+!assets/css/style.css
+!assets/scss/
+!assets/images/
+!index.html
+!README.md
+!docs/
+!assets/js/
