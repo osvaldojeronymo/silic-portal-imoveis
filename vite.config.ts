@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/portal-imoveis/',
+  base: '/silic-portal-imoveis/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
