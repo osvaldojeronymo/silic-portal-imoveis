@@ -1,6 +1,15 @@
 # SILIC 2.0 - Portal de Serviços
 
-Portal moderno desenvolvido com **Vite + TypeScript + SCSS** para o sistema SILIC da CAIXA.
+Portal ## 🌐 Deploy
+
+### GitHub Pages
+O projeto está configurado para deploy automático no GitHub Pages:
+
+1. **Build automático**: `npm run build`
+2. **Deploy**: `npm run deploy` 
+3. **URL**: https://osvaldojeronymo.github.io/silic-portal-imoveis/
+
+> ⚠️ **Nota**: Aguarde alguns minutos após o push para que o GitHub Actions processe o deploy.desenvolvido com **Vite + TypeScript + SCSS** para o sistema SILIC da CAIXA.
 
 ## ⚡ Tecnologias Utilizadas
 
