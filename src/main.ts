@@ -15,7 +15,7 @@ interface DashboardData {
 
 // URLs dos sistemas integrados
 const URLS: ServiceUrls = {
-  gestao: 'https://osvaldojeronymo.github.io/show-input-doc/?from=portal',
+  gestao: 'https://osvaldojeronymo.github.io/silic-input-doc/?from=portal',
   solicitacoes: 'https://osvaldojeronymo.github.io/silic-request-service/?from=portal',
   handson: 'https://osvaldojeronymo.github.io/silic-hands-on/?from=portal'
 };
