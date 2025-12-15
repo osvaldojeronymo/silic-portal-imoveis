@@ -64,6 +64,36 @@ const URLS = {
 - **Busca:** `show-input-doc/?from=portal#sipge`
 - **Relatórios:** Em desenvolvimento
 
+#### **Links externos (Portal):**
+- **Processo Digital:** `https://osvaldojeronymo.github.io/silic-digital-process/`
+- **Motivos de devolução:** `https://osvaldojeronymo.github.io/silic-catalog-reasons/`
+- **Assinador Digital:** `https://osvaldojeronymo.github.io/silic-digital-signer/`
+- **Gerador de Edital:** `https://osvaldojeronymo.github.io/silic-call-for-tenders/`
+
+### **Portal → URLs (com Gerador de Edital):**
+```javascript
+const URLS = {
+    gestao: 'https://osvaldojeronymo.github.io/show-input-doc/?from=portal',
+    solicitacoes: 'https://osvaldojeronymo.github.io/silic-request-service/?from=portal',
+    handson: 'https://osvaldojeronymo.github.io/silic-hands-on/?from=portal',
+    edital: 'https://osvaldojeronymo.github.io/silic-call-for-tenders/'
+};
+
+function acao(tipo) {
+    switch(tipo) {
+        case 'cadastro':
+            window.open(URLS.gestao + '#cadastro', '_blank');
+            break;
+        case 'busca':
+            window.open(URLS.gestao + '#sipge', '_blank');
+            break;
+        case 'edital':
+            window.open(URLS.edital, '_blank');
+            break;
+    }
+}
+```
+
 ## 📱 **Responsividade**
 
 ### **Desktop:**
