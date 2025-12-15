@@ -1,5 +1,10 @@
 # Changelog - SILIC 2.0 Portal
 
+## [1.0.1] - 2025-12-15
+
+### Added
+- **Ações Rápidas**: Inclusão do "Gerador de Edital" no portal
+
 ## [1.0.0] - 2025-01-10
 
 ### 🎉 Versão Inicial

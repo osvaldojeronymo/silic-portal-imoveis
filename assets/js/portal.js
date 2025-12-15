@@ -2,7 +2,8 @@
 const URLS = {
     gestao: 'https://osvaldojeronymo.github.io/silic-input-doc/?from=portal',
     solicitacoes: 'https://osvaldojeronymo.github.io/silic-request-service/?from=portal',
-    handson: 'https://osvaldojeronymo.github.io/silic-hands-on/?from=portal'
+    handson: 'https://osvaldojeronymo.github.io/silic-hands-on/?from=portal',
+    edital: 'https://osvaldojeronymo.github.io/silic-call-for-tenders/'
 };
 
 /**
@@ -40,6 +41,14 @@ function acao(tipo) {
         case 'relatorio':
             // Placeholder - em desenvolvimento
             alert('Funcionalidade de relatórios em desenvolvimento.\n\nEm breve você poderá:\n• Gerar relatórios de imóveis\n• Exportar dados\n• Visualizar dashboards');
+            break;
+
+        case 'edital':
+            if (URLS.edital) {
+                window.open(URLS.edital, '_blank');
+            } else {
+                alert('Gerador de Edital indisponível no momento.\n\nConfigure a URL em assets/js/portal.js (URLS.edital).');
+            }
             break;
             
         default:
