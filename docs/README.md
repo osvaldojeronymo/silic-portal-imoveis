@@ -18,6 +18,14 @@ Acesse a versão mais recente do protótipo via GitHub Pages:
 
 > O link é atualizado automaticamente a cada push neste repositório.
 
+## Ações Rápidas
+Atalhos disponíveis no portal para facilitar o acesso a ferramentas complementares:
+
+- **Processo Digital:** https://osvaldojeronymo.github.io/silic-digital-process/
+- **Motivos de devolução:** https://osvaldojeronymo.github.io/silic-catalog-reasons/
+- **Assinador Digital:** https://osvaldojeronymo.github.io/silic-digital-signer/
+- **Gerador de Edital:** https://osvaldojeronymo.github.io/silic-call-for-tenders/
+
 ## Como rodar localmente
 1. Clone o repositório:
    ```bash
