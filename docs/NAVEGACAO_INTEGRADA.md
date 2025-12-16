@@ -66,11 +66,11 @@ const URLS = {
 
 #### **Links externos (Portal):**
 - **Processo Digital:** `https://osvaldojeronymo.github.io/silic-digital-process/`
-- **Motivos de devolução:** `https://osvaldojeronymo.github.io/silic-catalog-reasons/`
+- **Motivos de Devolução:** `https://osvaldojeronymo.github.io/silic-catalog-reasons/`
 - **Assinador Digital:** `https://osvaldojeronymo.github.io/silic-digital-signer/`
-- **Gerador de Edital:** `https://osvaldojeronymo.github.io/silic-call-for-tenders/`
+- **Gerador de Documentos:** `https://osvaldojeronymo.github.io/silic-call-for-tenders/`
 
-### **Portal → URLs (com Gerador de Edital):**
+### **Portal → URLs (com Gerador de Documentos):**
 ```javascript
 const URLS = {
     gestao: 'https://osvaldojeronymo.github.io/show-input-doc/?from=portal',
