@@ -1,0 +1,331 @@
+openapi: 3.0.3
+info:
+  title: SILIC Portal Imoveis API
+  version: 1.0.0
+  description: >-
+    Contrato base para handoff do prototipo.
+    Objetivo: permitir implementacao backend em Quarkus e frontend em Angular com baixo retrabalho.
+servers:
+  - url: https://api.exemplo.caixa.gov.br
+    description: Ambiente alvo
+  - url: http://localhost:8080
+    description: Ambiente local
+
+tags:
+  - name: Servicos
+  - name: Solicitacoes
+  - name: Dashboard
+  - name: Imoveis
+  - name: Renovacoes
+
+paths:
+  /api/v1/servicos:
+    get:
+      tags: [Servicos]
+      summary: Lista servicos disponiveis para o perfil atual
+      operationId: listarServicos
+      responses:
+        '200':
+          description: Lista de servicos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Servico'
+
+  /api/v1/solicitacoes:
+    get:
+      tags: [Solicitacoes]
+      summary: Lista solicitacoes com filtros
+      operationId: listarSolicitacoes
+      parameters:
+        - in: query
+          name: status
+          schema:
+            $ref: '#/components/schemas/StatusSolicitacao'
+        - in: query
+          name: pagina
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - in: query
+          name: tamanho
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 20
+      responses:
+        '200':
+          description: Pagina de solicitacoes
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaginaSolicitacao'
+
+    post:
+      tags: [Solicitacoes]
+      summary: Cria uma nova solicitacao
+      operationId: criarSolicitacao
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NovaSolicitacaoRequest'
+      responses:
+        '201':
+          description: Solicitacao criada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Solicitacao'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+  /api/v1/dashboard/resumo:
+    get:
+      tags: [Dashboard]
+      summary: Retorna indicadores consolidados
+      operationId: obterResumoDashboard
+      responses:
+        '200':
+          description: Indicadores
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResumoDashboard'
+
+  /api/v1/imoveis:
+    get:
+      tags: [Imoveis]
+      summary: Lista imoveis com filtros
+      operationId: listarImoveis
+      parameters:
+        - in: query
+          name: uf
+          schema:
+            type: string
+            minLength: 2
+            maxLength: 2
+        - in: query
+          name: status
+          schema:
+            $ref: '#/components/schemas/StatusImovel'
+      responses:
+        '200':
+          description: Lista de imoveis
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Imovel'
+
+  /api/v1/imoveis/{imovelId}:
+    get:
+      tags: [Imoveis]
+      summary: Retorna detalhes do imovel
+      operationId: obterImovelPorId
+      parameters:
+        - in: path
+          name: imovelId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalhes do imovel
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImovelDetalhe'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/v1/renovacoes/decisoes:
+    post:
+      tags: [Renovacoes]
+      summary: Registra decisao sobre renovacao
+      operationId: registrarDecisaoRenovacao
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DecisaoRenovacaoRequest'
+      responses:
+        '201':
+          description: Decisao registrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DecisaoRenovacaoResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+
+components:
+  responses:
+    BadRequest:
+      description: Requisicao invalida
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErroPadrao'
+    NotFound:
+      description: Recurso nao encontrado
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErroPadrao'
+
+  schemas:
+    Servico:
+      type: object
+      required: [id, nome, descricao]
+      properties:
+        id:
+          type: string
+          example: dashboard
+        nome:
+          type: string
+          example: Dashboard
+        descricao:
+          type: string
+          example: Monitoramento de solicitacoes e indicadores
+
+    NovaSolicitacaoRequest:
+      type: object
+      required: [tipo, descricao, solicitante]
+      properties:
+        tipo:
+          type: string
+          example: locacao-imovel
+        descricao:
+          type: string
+          maxLength: 2000
+        solicitante:
+          type: string
+          example: joao.silva
+
+    Solicitacao:
+      type: object
+      required: [id, tipo, status, dataCriacao]
+      properties:
+        id:
+          type: string
+          example: SOL-2026-0001
+        tipo:
+          type: string
+        status:
+          $ref: '#/components/schemas/StatusSolicitacao'
+        dataCriacao:
+          type: string
+          format: date-time
+
+    PaginaSolicitacao:
+      type: object
+      required: [itens, pagina, tamanho, total]
+      properties:
+        itens:
+          type: array
+          items:
+            $ref: '#/components/schemas/Solicitacao'
+        pagina:
+          type: integer
+        tamanho:
+          type: integer
+        total:
+          type: integer
+
+    ResumoDashboard:
+      type: object
+      required: [totalSolicitacoes, pendentes, concluidas, totalImoveis]
+      properties:
+        totalSolicitacoes:
+          type: integer
+        pendentes:
+          type: integer
+        concluidas:
+          type: integer
+        totalImoveis:
+          type: integer
+
+    Imovel:
+      type: object
+      required: [id, codigo, nome, status]
+      properties:
+        id:
+          type: string
+        codigo:
+          type: string
+        nome:
+          type: string
+        status:
+          $ref: '#/components/schemas/StatusImovel'
+
+    ImovelDetalhe:
+      allOf:
+        - $ref: '#/components/schemas/Imovel'
+        - type: object
+          properties:
+            uf:
+              type: string
+            municipio:
+              type: string
+            endereco:
+              type: string
+            dataFimVigencia:
+              type: string
+              format: date
+
+    DecisaoRenovacaoRequest:
+      type: object
+      required: [imovelId, decisao, usuario]
+      properties:
+        imovelId:
+          type: string
+        decisao:
+          type: string
+          enum: [RENOVAR, NAO_RENOVAR]
+        motivo:
+          type: string
+          maxLength: 1000
+        usuario:
+          type: string
+
+    DecisaoRenovacaoResponse:
+      type: object
+      required: [protocolo, dataRegistro]
+      properties:
+        protocolo:
+          type: string
+          example: REN-2026-000123
+        dataRegistro:
+          type: string
+          format: date-time
+
+    ErroPadrao:
+      type: object
+      required: [codigo, mensagem]
+      properties:
+        codigo:
+          type: string
+          example: REQ-400
+        mensagem:
+          type: string
+          example: Campo obrigatorio nao informado
+        detalhes:
+          type: array
+          items:
+            type: string
+
+    StatusSolicitacao:
+      type: string
+      enum: [ABERTA, EM_ANALISE, PENDENTE, CONCLUIDA, CANCELADA]
+
+    StatusImovel:
+      type: string
+      enum: [ATIVO, PROSPECCAO, MOBILIZACAO, DESMOBILIZACAO, INATIVO]
